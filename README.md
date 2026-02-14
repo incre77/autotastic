@@ -34,6 +34,7 @@ Framework ligero basado en **MicroPython** para interactuar con dispositivos **M
 Conecta tu dispositivo MicroPython al nodo Meshtastic:
 * **TX (MicroPython)** -> **RX (Meshtastic)**
 * **RX (MicroPython)** -> **TX (Meshtastic)**
+* **GND (MicroPython)** -> **GND (Meshtastic)**
 * Baudrate: `115200`
 * En el esp32 tx_pin=9 y rx_pin=10 configurados en el archivo transport_serial.py
 * En mi caso particular trabaje con un nfr52840 donde el rx y el tx eran el 6 y el 8
