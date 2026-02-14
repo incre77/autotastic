@@ -50,10 +50,28 @@ Si no hay Wi-Fi configurado, el dispositivo entra en modo AP:
 
 Puedes gestionar el dispositivo enviando mensajes desde cualquier nodo de la red:
 
-* `/rule_list`: Lista los nombres de las reglas actuales.
-* `/rule_add NOMBRE CODIGO`: Añade una nueva regla.
-* `/rule_delete NOMBRE`: Borra una regla.
-* `/rule_change NOMBRE CODIGO`: Actualiza una regla existente.
+## 💬 Interacciones desde el Chat 
+
+El dispositivo monitoriza el tráfico de la red, pero por seguridad y organización, **los comandos de administración solo se procesan si se envían a través del Canal 1**.
+
+### 1. Comandos de Sistema
+| Comando | Acción |
+| :--- | :--- |
+| `/help` | Muestra la lista de comandos disponibles y ayuda rápida. |
+| `/server` | Devuelve la **IP actual** (Local o AP) para acceder a la configuración web. |
+
+### 2. Gestión de Reglas Dinámicas
+Permiten editar el comportamiento del dispositivo sin necesidad de cables:
+
+| Comando | Parámetros | Descripción |
+| :--- | :--- | :--- |
+| `/rule_list` | (ninguno) | Lista los nombres de todas las reglas guardadas. |
+| `/rule_add` | `NOMBRE CODIGO` | Añade una regla. El código se indenta automáticamente. |
+| `/rule_change` | `NOMBRE CODIGO` | Actualiza el código de una regla existente. |
+| `/rule_delete` | `NOMBRE` | Borra la regla del sistema. |
+
+> **Ejemplo:** `/rule_add alerta if 'auxilio' in txt: print('Alerta detectada')`
+> Vea el contenido de external_code.py que ya dispone de varios ejemplos de reglas.
 
 ---
 
