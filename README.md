@@ -68,21 +68,23 @@ Permiten editar el comportamiento del dispositivo sin necesidad de cables:
 | `/rule_change` | `NOMBRE CODIGO` | Actualiza el código de una regla existente. |
 | `/rule_delete` | `NOMBRE` | Borra la regla del sistema. |
 
-> Vea el contenido de external_code.py que ya dispone de varios ejemplos de reglas.
+# Vea el contenido de external_code.py que ya dispone de varios ejemplos de reglas.
 
 
-# Esta parte del archivo external_code.py es mejor no tocarla y mantenera tal cual.
-from sendmail import *
-import machine,time
-async def rules(device,packet,ch,txt):
+ Esta parte del archivo external_code.py es mejor no tocarla y mantenera tal cual.
+
+    from sendmail import *
+    import machine,time
+    async def rules(device,packet,ch,txt):
 
 
-# Esta regla es un ejemplo de como crear una variable e igualarla a 0 si no existe y sumar 1 si existe, despues envia un mensaje de vuelta al canal con el contenido de la variable
+ Esta regla es un ejemplo de como crear una variable e igualarla a 0 si no existe y sumar 1 si existe, despues envia un mensaje de vuelta al canal con el contenido de la variable
+
     #RULE:A    
     if ch==2 and 'c1' in txt: global c; c = c + 1 if 'c' in globals() else 1; await device.send_to_channel(ch, f"Contador:{c}.")    
 
-# Esta regla solo se ejecuta si se recibe un texto que contanga la palaga  "gorrion" en el canal 0 (el canal 0 es None. si)
-# y si ocurre se setean unas variables que haran falta en la siguiente regla
+ Esta regla solo se ejecuta si se recibe un texto que contanga la palaga  "gorrion" en el canal 0 (el canal 0 es None. si) y si ocurre se setean unas variables que haran falta en la siguiente regla
+> 
     #RULE:B
     if(ch == None and "gorrion" in txt ):
         host = "smtp.tuservidor.net"
@@ -90,19 +92,18 @@ async def rules(device,packet,ch,txt):
         user = "info@tucorreo.es"
         password = "tu password" 
 
-# Esta regla tiene exactamente la misma condición que la anterior y es igual porque un paquete meshtastic tiene una limitacion de 237 bytes de los cuales
-# la cabecera ocupa unos 40. Asi que el contenido de cada una de estas reglas debe ser de 195 bytes maximo para poder ser manejadas remotamente desde otro 
-# nodo. Si quieres puedes añadir reglas mas grandes pero tendrás que gestinarlas via wifi.
-#
-# Debido a falta de memoria cuando se ejecuta un program_mail como es en este caso. Se programa el mail a enviar  y se resetea el controlador para enviar el 
-# mail justos despues del arranque. Una vez enviado vuelve a resetear el controlador volviendo a su estado natural de espera de eventos.
+ Esta regla tiene exactamente la misma condición que la anterior y es igual porque un paquete meshtastic tiene una limitacion de 237 bytes de los cuales
+ la cabecera ocupa unos 40. Asi que el contenido de cada una de estas reglas debe ser de 195 bytes maximo para poder ser manejadas remotamente desde otro 
+ nodo. Si quieres puedes añadir reglas mas grandes pero tendrás que gestinarlas via wifi.
+
+ Debido a falta de memoria cuando se ejecuta un program_mail como es en este caso. Se programa el mail a enviar  y se resetea el controlador para enviar el 
+ mail justos despues del arranque. Una vez enviado vuelve a resetear el controlador volviendo a su estado natural de espera de eventos.
 
     #RULE:C
     if(ch == None and "gorrion" in txt ):
         await program_mail("tucorreo@gmail.com", "notificacion autotastic", f"Se detectó la palabra gorrion en el canal 0.",host,port,user,password)
         
-# Esta regla se ejecuta si en tercer canal configurado en tu nodo se recibe un mensaje que contenga el texto "led". En ese caso se enviará un pulso al pin 0 
-# durante 3 segundos y despues se apagará    
+Esta regla se ejecuta si en tercer canal configurado en tu nodo se recibe un mensaje que contenga el texto "led". En ese caso se enviará un pulso al pin 0 durante 3 segundos y despues se apagará    
 
     #RULE:D
     if(ch==2 and 'led' in txt):
