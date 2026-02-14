@@ -60,6 +60,8 @@ Asegurate de que tu segundo canal tanto en el nodo a controlar como el nodo cont
 | `/help` | Muestra la lista de comandos disponibles y ayuda rápida. |
 | `/server` | Devuelve la **IP actual** (Local o AP) para acceder a la configuración web. |
 
+<img width="1574" height="756" alt="Captura desde 2026-02-14 19-18-02" src="https://github.com/user-attachments/assets/6940b1c1-a9ca-4d0b-a3ec-f2937bf346e0" />
+
 ### 2. Gestión de Reglas Dinámicas
 Permiten editar el comportamiento del dispositivo sin necesidad de cables:
 
@@ -69,6 +71,9 @@ Permiten editar el comportamiento del dispositivo sin necesidad de cables:
 | `/rule_add` | `NOMBRE CODIGO` | Añade una regla. El código se indenta automáticamente. |
 | `/rule_change` | `NOMBRE CODIGO` | Actualiza el código de una regla existente. |
 | `/rule_delete` | `NOMBRE` | Borra la regla del sistema. |
+
+![photo_2026-02-14_19-22-23](https://github.com/user-attachments/assets/fd97e36b-5c4c-4ad4-b79d-fe9a0400fa65)
+
 
 # Vea el contenido de external_code.py que ya dispone de varios ejemplos de reglas.
 
@@ -126,6 +131,10 @@ Para evitar errores de memoria (MemoryError), el módulo `sendmail.py`:
 3. Al arrancar, `boot.py` detecta el correo, lo envía con la RAM limpia y continúa con el flujo normal.
 
 ---
+
+Este software ha sido desarrollado con thonny.
+<img width="903" height="685" alt="Captura desde 2026-02-14 19-14-01" src="https://github.com/user-attachments/assets/b8087525-32e9-468a-a3e1-8db3870c5c05" />
+
 
 ## 🛡️ Licencia
 
