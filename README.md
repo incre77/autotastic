@@ -36,7 +36,7 @@ Conecta tu dispositivo MicroPython al nodo Meshtastic:
 * **RX (MicroPython)** -> **TX (Meshtastic)**
 * **GND (MicroPython)** -> **GND (Meshtastic)**
 * Baudrate: `115200`
-* En el esp32 tx_pin=9 y rx_pin=10 configurados en el archivo transport_serial.py
+* En el esp32 tx_pin=9 y rx_pin=10 por defecto.
 * En mi caso particular trabaje con un nfr52840 donde el rx y el tx eran el 6 y el 8
 
  ![photo_2026-02-14_19-28-20](https://github.com/user-attachments/assets/25f75b3d-060c-4559-b82e-a7748dce9955)
