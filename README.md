@@ -1,6 +1,6 @@
 # AutoTastic
 # Meshtastic MicroPython Controller 🛰️
-Framework ligero basado en **MicroPython** para interactuar con dispositivos **Meshtastic** vía Serial (UART). Permite automatizar respuestas, enviar telemetría, gestionar el nodo desde la web y ejecutar reglas personalizadas.
+Sistema de automatización basado en **MicroPython** para interactuar con dispositivos **Meshtastic** vía Serial (UART). Permite automatizar respuestas, enviar telemetría, gestionar el nodo desde la web y ejecutar reglas personalizadas.
 
 ![550140306-83813c88-f9b1-46f2-b291-95acc0ec9e7d](https://github.com/user-attachments/assets/0e6edda5-2b99-482b-abe6-24aa15ca5cb6)
 
@@ -8,8 +8,12 @@ Framework ligero basado en **MicroPython** para interactuar con dispositivos **M
 
 * **Protocolo Nativo:** Codificación y decodificación Protobuf para Meshtastic.
 * **Motor de Reglas Dinámico:** Sistema para modificar `external_code.py` en tiempo real mediante comandos de chat.
-* **Servidor Web:** Interfaz para configurar Wi-Fi y editar el código de reglas desde el navegador.
+* **Gestión remota a traves de protocolo meshtastic:** Mantenimiento de reglas via mesh.
+* **Servidor Web:** Panel web para configurar Wi-Fi y editar las reglas desde el navegador.
 * **Gestión de Correo:** Envío SMTP con persistencia post-reinicio para optimizar el uso de RAM.
+* **Control total:** Control total de pines para activar o desactivar leds, reles, etc según tus reglas.
+* **Mensajes a canales o a nodos:** Envio de mensajes.
+* **Mensajes de Telemetria:** Envio de mensajes de telemetria personalizados.
 * **Asíncrono:** Basado en `uasyncio` para multitarea sin bloqueos.
 
 ---
