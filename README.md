@@ -61,10 +61,10 @@ Si no hay Wi-Fi configurado, el dispositivo entra en modo AP:
 
 Puedes gestionar el dispositivo enviando mensajes desde cualquier nodo de la red:
 
-## 💬 Interacciones desde el Chat 
+## 💬 Sistema de gestión via meshtastic.
 
 El dispositivo monitoriza el tráfico de la red, pero por seguridad y organización, **los comandos de administración solo se procesan si se envían a través del Canal 1**.
-Asegurate de que tu segundo canal tanto en el nodo a controlar como el nodo controlador tengan el mismo canal con la misma clave para que nadie pueda manipular las reglas que gestionarán tu nodo.
+Asegurate de que tu segundo canal (ch1) tanto en el nodo a controlar como el nodo controlador tengan el mismo canal con la misma clave para que nadie pueda manipular las reglas que gestionarán tu nodo.
 
 ### 1. Comandos de Sistema
 | Comando | Acción |
@@ -86,7 +86,7 @@ Permiten editar el comportamiento del dispositivo sin necesidad de cables:
 
 ![photo_2026-02-14_19-22-23](https://github.com/user-attachments/assets/fd97e36b-5c4c-4ad4-b79d-fe9a0400fa65)
 
-## 📜 El archivo external_rules.py: El almacen de la reglas y alguns ejemplos.
+## 📜 El archivo external_rules.py: El almacen de la reglas; algunos ejemplos y cosas que debes saber.
 
  Este archivo es el lugar donde se almacenarán todas las reglas que el sistema ejecutará cada vez que se reciba un mensaje que no sea en el canal 1. (el canal 1 esta reservado a mensajes de gestión arriba mencionados.)
 
