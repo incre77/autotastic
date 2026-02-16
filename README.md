@@ -11,10 +11,12 @@ Sistema de automatización basado en **MicroPython** para interactuar con dispos
 * **Gestión remota a traves de protocolo meshtastic:** Mantenimiento de reglas via mesh.
 * **Servidor Web:** Panel web para configurar Wi-Fi y editar las reglas desde el navegador.
 * **Gestión de Correo:** Envío SMTP con persistencia post-reinicio para optimizar el uso de RAM.
-* **Control total:** Control total de pines para activar o desactivar leds, reles, etc según tus reglas.
+* **Control total:** Control total de pines para activar o desactivar leds, reles, leer sensores, etc según tus reglas.
 * **Mensajes a canales o a nodos:** Envio de mensajes.
 * **Mensajes de Telemetria:** Envio de mensajes de telemetria personalizados.
 * **Asíncrono:** Basado en `uasyncio` para multitarea sin bloqueos.
+
+Un ejemplo: Podrias hacer que cuando se reciba un msg en el canal 2 con el texto "temperatura", tu esp32 lea un valor analógico en un pin del gpio y envie un texto tipo "la temperatura es de X" al canal 1. O que envie un paquete de telemetria con el valor leido. etc... más ejemplos abajo.
 
 ---
 
