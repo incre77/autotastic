@@ -1,7 +1,8 @@
 # AutoTastic
 # Meshtastic MicroPython Controller 🛰️
 Framework ligero basado en **MicroPython** para interactuar con dispositivos **Meshtastic** vía Serial (UART). Permite automatizar respuestas, enviar telemetría, gestionar el nodo desde la web y ejecutar reglas personalizadas.
-![unnamed](https://github.com/user-attachments/assets/83813c88-f9b1-46f2-b291-95acc0ec9e7d)
+
+![550140306-83813c88-f9b1-46f2-b291-95acc0ec9e7d](https://github.com/user-attachments/assets/0e6edda5-2b99-482b-abe6-24aa15ca5cb6)
 
 ## 🚀 Características principales
 
