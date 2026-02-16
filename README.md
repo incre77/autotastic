@@ -7,7 +7,7 @@ Sistema de automatización basado en **MicroPython** para interactuar con dispos
 ## 🚀 Características principales
 
 * **Protocolo Nativo:** Codificación y decodificación Protobuf para Meshtastic.
-* **Motor de Reglas Dinámico:** Sistema para modificar `external_code.py` en tiempo real mediante comandos de chat.
+* **Motor de Reglas Dinámico:** Sistema para modificar `external_code.py`.
 * **Gestión remota a traves de protocolo meshtastic:** Mantenimiento de reglas via mesh.
 * **Servidor Web:** Panel web para configurar Wi-Fi y editar las reglas desde el navegador.
 * **Gestión de Correo:** Envío SMTP con persistencia post-reinicio para optimizar el uso de RAM.
@@ -86,9 +86,9 @@ Permiten editar el comportamiento del dispositivo sin necesidad de cables:
 
 ![photo_2026-02-14_19-22-23](https://github.com/user-attachments/assets/fd97e36b-5c4c-4ad4-b79d-fe9a0400fa65)
 
+## 📜 El archivo external_rules.py: El almacen de la reglas y alguns ejemplos.
 
-# Vea el contenido de external_code.py que ya dispone de varios ejemplos de reglas.
-
+ Este archivo es el lugar donde se almacenarán todas las reglas que el sistema ejecutará cada vez que se reciba un mensaje que no sea en el canal 1. (el canal 1 esta reservado a mensajes de gestión arriba mencionados.)
 
  Esta parte del archivo external_code.py es mejor no tocarla y mantenera tal cual.
 
