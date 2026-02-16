@@ -118,8 +118,8 @@ Permiten editar el comportamiento del dispositivo sin necesidad de cables:
 
 En cualquier caso, si la regla supera los 200 bytes no podra ser gestionada desde los comandos tipo /node_ desde meshtastic. Aunque si podra ser ejecutada desde el sistema.
 
- Debido a falta de memoria cuando se ejecuta un program_mail como es en este caso. Se programa el mail a enviar  y se resetea el controlador para enviar el 
- mail justos despues del arranque. Una vez enviado vuelve a resetear el controlador volviendo a su estado natural de espera de eventos.
+ Debido a falta de memoria cuando se ejecuta un program_mail como es en este caso, se programa el mail a enviar  y se resetea el controlador para enviar el 
+ mail justo despues del arranque. Una vez enviado vuelve a resetear el controlador volviendo a su estado natural de espera de eventos.
 
     #RULE:C
     if(ch == None and "gorrion" in txt ):
