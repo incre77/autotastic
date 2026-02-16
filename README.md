@@ -63,7 +63,7 @@ Asegurate de que tu segundo canal tanto en el nodo a controlar como el nodo cont
 | Comando | Acción |
 | :--- | :--- |
 | `/help` | Muestra la lista de comandos disponibles y ayuda rápida. |
-| `/server` | Devuelve la **IP actual** (Local o AP) para acceder a la configuración web. |
+| `/server` | Activa un panel accesible desde la ip asignada por dhcp o la ip fija que se configuró. |
 
 <img width="1574" height="756" alt="Captura desde 2026-02-14 19-18-02" src="https://github.com/user-attachments/assets/6940b1c1-a9ca-4d0b-a3ec-f2937bf346e0" />
 
