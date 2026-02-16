@@ -108,6 +108,9 @@ Permiten editar el comportamiento del dispositivo sin necesidad de cables:
  Esta regla tiene exactamente la misma condición que la anterior y es igual porque un paquete meshtastic tiene una limitacion de 237 bytes de los cuales
  la cabecera ocupa unos 40. Asi que el contenido de cada una de estas reglas debe ser de 195 bytes maximo para poder ser manejadas remotamente desde otro 
  nodo. Si quieres puedes añadir reglas mas grandes pero tendrás que gestinarlas via wifi.
+ Tambien podeis ahorrar bytes comprimiendo toda la regla en una sola linea como se muestra en la regla de ejemplo A.
+
+En cualquier caso, si la regla supera los 200 bytes no podra ser gestionada desde los comandos tipo /node_ desde meshtastic. Aunque si podra ser ejecutada desde el sistema.
 
  Debido a falta de memoria cuando se ejecuta un program_mail como es en este caso. Se programa el mail a enviar  y se resetea el controlador para enviar el 
  mail justos despues del arranque. Una vez enviado vuelve a resetear el controlador volviendo a su estado natural de espera de eventos.
